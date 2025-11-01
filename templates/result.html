@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 30px;
+            display: inline-block;
+            width: 85%;
+        }
+
+        img {
+            max-width: 400px;
+            margin: 20px 0;
+            border: 2px solid #a5d6a7;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #1b5e20;
+        }
+
+        h2 {
+            color: #2e7d32;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background: #e0f2f1;
+            color: #004d40;
+        }
+
+        tr:nth-child(even) {
+            background: #f1f8e9;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        a:hover {
+            background-color: #388e3c;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Prediction Result 🌿</h1>
+        <img src="{{ url_for('static', filename=image_file) }}" alt="Uploaded Leaf">
+
+        <h2>{{ predicted_label }}</h2>
+        <p><strong>Confidence:</strong> {{ confidence }}%</p>
+
+        <table>
+            <thead>
+                <tr>
+                    {% for header in headers %}
+                    <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for remedy in remedies %}
+                <tr>
+                    <td>{{ remedy['Type'] }}</td>
+                    <td>{{ remedy['Pesticide'] }}</td>
+                    <td>{{ remedy['Dosage'] }}</td>
+                    <td>{{ remedy['Solution'] }}</td>
+                    <td>{{ remedy['Amount'] }}</td>
+                    <td>{{ remedy['Frequency'] }}</td>
+                    <td>{{ remedy['Notes'] }}</td>
+                    <td>{{ remedy['Safety Notes'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="/">🔙 Go Back</a>
+    </div>
+</body>
+</html>

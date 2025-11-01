@@ -1,0 +1,62 @@
+{
+  "en": {
+    "title": "Prediction Result",
+    "disease": "Disease",
+    "confidence": "Confidence",
+    "remedies": "Recommended Remedies",
+    "type": "Type",
+    "pesticide": "Pesticide",
+    "dosage": "Dosage",
+    "solution": "Solution",
+    "amount": "Amount",
+    "frequency": "Frequency",
+    "notes": "Notes",
+    "safety_notes": "Safety Notes",
+    "back": "🔙 Go Back",
+    "select_language": "Language"
+  },
+  "mr": {
+    "title": "भाकीत परिणाम",
+    "disease": "रोग",
+    "confidence": "विश्वास",
+    "remedies": "शिफारस केलेले उपाय",
+    "type": "प्रकार",
+    "pesticide": "किटकनाशक",
+    "dosage": "डोस",
+    "solution": "उपाय",
+    "amount": "प्रमाण",
+    "frequency": "वारंवारता",
+    "notes": "टीप",
+    "safety_notes": "सुरक्षा टीप",
+    "back": "🔙 मागे जा",
+    "select_language": "भाषा"
+  },
+  "diseases": {
+    "Late Blight": { "en": "Late Blight", "mr": "लेट ब्लाइट" },
+    "Early Blight": { "en": "Early Blight", "mr": "लवकर ब्लाइट" }
+  },
+  "remedies": {
+    "late_blight_1": {
+      "en": {
+        "remedy_type": "Chemical",
+        "pesticide": "Metalaxyl + Mancozeb",
+        "dosage": "2 g/litre",
+        "solution": "Spray at first sign of disease",
+        "amount": "600 litres/acre",
+        "frequency": "Every 7 days",
+        "notes": "Highly effective systemic fungicide",
+        "safety_notes": "Do not repeat >2 times/season"
+      },
+      "mr": {
+        "remedy_type": "रासायनिक",
+        "pesticide": "मेटालॅक्सिल + मँकोझेब",
+        "dosage": "2 ग्रॅम/लिटर",
+        "solution": "रोगाचे पहिले चिन्ह दिसल्यावर फवारणी करा",
+        "amount": "600 लिटर/एकर",
+        "frequency": "दर 7 दिवस",
+        "notes": "खूप प्रभावी सिस्टमिक फंजिसाईड",
+        "safety_notes": "हंगामात 2 वेळापेक्षा जास्त करु नका"
+      }
+    }
+  }
+}
