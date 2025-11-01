@@ -1,11 +1,12 @@
-Flask==3.0.3
-pandas
-requests
-deep-translator
-tensorflow-cpu==2.12.0
 keras==2.12.0
-h5py==3.8.0
-numpy==1.23.5
-Pillow==9.5.0
-gunicorn
+flask==3.0.3
+gunicorn==21.2.0
+pandas==2.2.3
+requests==2.32.3
+deep-translator==1.11.4
+numpy==1.26.4
+Pillow==10.4.0
+h5py==3.11.0
+protobuf==4.25.3
+tensorflow==2.20.0
 
